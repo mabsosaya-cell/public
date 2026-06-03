@@ -14,14 +14,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0`
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-
-          # 현재 프로젝트 폴더
           local-dir: ./
-
-          # 카페24 업로드 경로
-          server-dir: /kkh8874/www/public
+          server-dir: /kkh8874/www/public/
